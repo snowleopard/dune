@@ -1,6 +1,8 @@
 2.0.0 (unreleased)
 ------------------
 
+- Add field `(optional)` for executable stanzas (#2463, fixes #2433, @bobot)
+
 - Indicate the progress of the initial file tree loading (#2459, fixes #2374,
   @bobot)
 
