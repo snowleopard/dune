@@ -1189,6 +1189,14 @@
    (progn (run %{exe:cram.exe} -test run.t) (diff? run.t run.t.corrected)))))
 
 (alias
+ (name optional-executable)
+ (deps (package dune) (source_tree test-cases/optional-executable))
+ (action
+  (chdir
+   test-cases/optional-executable
+   (progn (run %{exe:cram.exe} -test run.t) (diff? run.t run.t.corrected)))))
+
+(alias
  (name output-obj)
  (deps (package dune) (source_tree test-cases/output-obj))
  (action
@@ -1792,6 +1800,7 @@
   (alias odoc-unique-mlds)
   (alias old-dune-subsystem)
   (alias optional)
+  (alias optional-executable)
   (alias output-obj)
   (alias package-dep)
   (alias path-variables)
@@ -1976,6 +1985,7 @@
   (alias odig-files-workspace)
   (alias old-dune-subsystem)
   (alias optional)
+  (alias optional-executable)
   (alias output-obj)
   (alias path-variables)
   (alias pkg-config-quoting)
